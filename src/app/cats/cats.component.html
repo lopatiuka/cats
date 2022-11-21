@@ -1,0 +1,24 @@
+<div>
+</div>
+<div class="container">
+    <div class="top-bar">
+        <div class="limit">
+            <input type="number" min="1" [formControl]="limit">
+        </div>
+
+        <div class="breeds">
+            <button type="button" class="btn btn-primary me-2" (click)="showAll()">Show All Cats</button>
+            <p>or choose breed</p>
+            <select name="breeds" id="breeds" [(ngModel)]="breed" (change)="getCatsByBreed()">
+                <option *ngFor="let breed of breeds$ | async" id={{breed.id}} [ngValue]="breed">{{breed.name}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="cats-list">
+        <div class="image" *ngFor="let cat of cats$ | async">
+            <img src={{cat.url}} alt="">
+        </div>
+    </div>
+</div>
+

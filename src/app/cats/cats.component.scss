@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    .top-bar {
+        border-bottom: 1px solid rgb(237, 230, 230);
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+
+        select, input {
+            padding: 7px;
+            border: 1px solid rgb(186, 185, 185);
+            border-radius: 5px;
+            outline: none;
+            transition: all 0.2s ease-in-out;
+
+            &:focus {
+                -webkit-box-shadow: 0px 0px 15px -6px rgba(57,38,227,0.81);
+                -moz-box-shadow: 0px 0px 15px -6px rgba(57,38,227,0.81);
+                box-shadow: 0px 0px 15px -6px rgba(57,38,227,0.81);
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .limit {
+            margin-bottom: 15px;
+        }
+
+        .breeds {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .cats-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .image {
+            padding: 5px;
+            max-width: 25%;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+}
